@@ -1,25 +1,24 @@
-import string
-
 #Opens file and saves it as a list
 my_file = open("../PuzzleData/day2_puzzle_input.txt", "r")
 content = my_file.read()
 puzzle_data = content.split("\n")
+puzzle_data = [x.split(" ") for x in puzzle_data]
 my_file.close()
 
 #Intalize values
 horiz = 0
 depth = 0
 #Iterate over commands
-for command in puzzle_data:
+for command, number in puzzle_data:
     if 'down' in command:
         #get number value from command
-        number = int(command.strip(string.ascii_letters))
+        number = int(number)
         depth+=number
     elif 'up' in command:
-        number = int(command.strip(string.ascii_letters))
+        number = int(number)
         depth-=number
     if 'forward' in command:
-        number = int(command.strip(string.ascii_letters))
+        number = int(number)
         horiz+=number
         
 print(f"Horizontal Postion: {horiz}")
@@ -31,15 +30,15 @@ print("")
 horiz = 0
 depth = 0
 aim = 0
-for command in puzzle_data:
+for command,number in puzzle_data:
     if 'down' in command:
-        number = int(command.strip(string.ascii_letters))
+        number = int(number)
         aim+=number
     elif 'up' in command:
-        number = int(command.strip(string.ascii_letters))
+        number = int(number)
         aim-=number
     if 'forward' in command:
-        number = int(command.strip(string.ascii_letters))
+        number = int(number)
         horiz+=number
         depth = depth+(aim*number)
         

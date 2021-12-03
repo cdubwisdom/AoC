@@ -1,7 +1,7 @@
 import string
 
 
-my_file = open("day2_puzzle_input.txt", "r")
+my_file = open("../PuzzleData/day2_puzzle_input.txt", "r")
 content = my_file.read()
 puzzle_data = content.split("\n")
 my_file.close()

@@ -1,5 +1,5 @@
 #Opens file and saves it as a list of ints
-my_file = open("day1_puzzle_input.txt", "r")
+my_file = open("../PuzzleData/day1_puzzle_input.txt", "r")
 content = my_file.read()
 puzzle_data = content.split("\n")
 puzzle_data = [int(x) for x in puzzle_data]

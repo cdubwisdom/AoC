@@ -1,4 +1,4 @@
-my_file = open("day3_puzzle_input.txt", "r")
+my_file = open("../PuzzleData/day3_puzzle_input.txt", "r")
 content = my_file.read()
 puzzle_data = content.split("\n")
 my_file.close()

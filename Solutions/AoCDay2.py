@@ -1,6 +1,6 @@
 import string
 
-
+#Opens file and saves it as a list
 my_file = open("../PuzzleData/day2_puzzle_input.txt", "r")
 content = my_file.read()
 puzzle_data = content.split("\n")

@@ -34,5 +34,5 @@ for call in draw:
             winner.append((board, call))
             boards.pop(i)
 
-print('Part 1:', score(*winner[0]))
-print('Part 2:', score(*winner[len(winner) - 2]))
+print(f"Winning Score is: {score(*winner[0])}")
+print(f"Losing Score is: {score(*winner[len(winner) - 2])}")

@@ -81,5 +81,5 @@ with open("../PuzzleData/day11_puzzle_input.txt", "r") as my_file:
     puzzle_data = content.split("\n")
     puzzle_data = np.array([[int(x) for x in y] for y in puzzle_data])
 
-print(solution1(puzzle_data))
-print(solution2(puzzle_data))
+print(f"Number of Flashes After 100 Steps: {solution1(puzzle_data)}")
+print(f"Number of Steps Till Synchronisation: {solution2(puzzle_data)}")

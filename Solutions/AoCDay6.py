@@ -23,5 +23,5 @@ def solution_2(data, days):
         assert len(fish_age_count) == 9
     return sum(fish_age_count)
 
-print(f"Laternfish after 80 days: {solution_2(puzzle_data, 80)}")
+print(f"Laternfish after 80 days: {solution_1(puzzle_data, 80)}")
 print(f"Laternfish after 256 days: {solution_2(puzzle_data, 256)}")

@@ -1,6 +1,5 @@
 from re import findall
 from collections import Counter
-from math import floor
 
 
 def insert_element(chain, element, index):
@@ -38,13 +37,13 @@ def solution2(data):
             count[first + middle] += n
             count[middle + second] += n
 
-    element_occurrence = Counter()
+    element_occurrence = Counter([template[0], template[-1]])
     for (first, second), n in count.items():
         element_occurrence[first] += n
         element_occurrence[second] += n
     (_,most_common), *_, (_,least_common) = element_occurrence.most_common()
 
-    return floor((most_common-least_common)/2)
+    return int((most_common-least_common)/2)
 
 
 with open("../PuzzleData/day14_puzzle_input.txt", "r") as my_file:
